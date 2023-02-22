@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdo.abdoc482.addProductController">
+    <children>
+        <Label layoutX="32.0" layoutY="32.0" text="Add Product" />
+        <VBox layoutX="32.0" layoutY="78.0" prefHeight="164.0" prefWidth="87.0" spacing="10.0">
+            <children>
+                <Label text="ID" />
+                <Label text="Name" />
+                <Label text="Inv" />
+                <Label text="Price" />
+                <Label text="Max" />
+                <Label text="Min" />
+            </children>
+        </VBox>
+        <VBox layoutX="128.0" layoutY="78.0" prefHeight="164.0" prefWidth="139.0">
+            <children>
+                <TextField fx:id="addProductViewIdTxt" editable="false" promptText="Auto Gen -Disabled" />
+                <TextField fx:id="addProductViewNameTxt" />
+                <TextField fx:id="addProductViewInvTxt" />
+                <TextField fx:id="addProductViewPriceTxt" />
+                <TextField fx:id="addProductViewMaxTxt" />
+                <TextField fx:id="addProductViewMinTxt" />
+            </children>
+        </VBox>
+        <TextField fx:id="addProductViewPartSearchTxtStat" layoutX="590.0" layoutY="28.0" onAction="#addProductViewPartSearchTxt" promptText="Search by Part or Name" />
+        <TableView fx:id="addProductViewPartTableView" layoutX="392.0" layoutY="60.0" prefHeight="200.0" prefWidth="372.0">
+            <columns>
+                <TableColumn fx:id="addProductViewPartIdClmn" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="addProductViewPartNameClmn" prefWidth="75.0" text="Part Name" />
+                <TableColumn fx:id="addProductViewInvLevelClmn" prefWidth="75.0" text="Inv Level" />
+                <TableColumn fx:id="addProductViewPartPriceClmn" prefWidth="146.0" text="Price/cost per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="addProductViewPartCurrentTableView" layoutX="392.0" layoutY="329.0" prefHeight="200.0" prefWidth="372.0">
+            <columns>
+                <TableColumn fx:id="addProductViewPartIdCurrentClmn" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="addProductViewPartNameCurrentClmn" prefWidth="75.0" text="Part Name" />
+                <TableColumn fx:id="addProductViewPartInvCurrentClmn" prefWidth="75.0" text="Inv Level" />
+                <TableColumn fx:id="addProductViewPartCurrentPriceClmn" prefWidth="146.0" text="Price/cost per Unit" />
+            </columns>
+        </TableView>
+        <Button layoutX="651.0" layoutY="283.0" mnemonicParsing="false" onAction="#addProductViewAddBtn" text="Add" />
+        <Button layoutX="405.0" layoutY="538.0" mnemonicParsing="false" onAction="#addProductViewRemovePartBtn" text="Remove Part" />
+        <Button layoutX="525.0" layoutY="538.0" mnemonicParsing="false" onAction="#addProductViewSavePartBtn" text="Save" />
+        <Button layoutX="614.0" layoutY="538.0" mnemonicParsing="false" onAction="#addProductViewCancelPartBtn" text="Cancel" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="392.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="abdo.abdoc482.addPartController">
+    <children>
+        <Label layoutX="37.0" layoutY="50.0" text="Add part" />
+        <RadioButton fx:id="addPartViewInhouseRadioBtnStat" layoutX="128.0" layoutY="50.0" mnemonicParsing="false" onAction="#addPartViewInhouseRadioBtn" text="In-Housse">
+         <toggleGroup>
+            <ToggleGroup fx:id="RadioBtn" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="addPartViewOutSourceRadioBtnStat" layoutX="257.0" layoutY="50.0" mnemonicParsing="false" onAction="#addPartViewOutsourcedRadioBtn" text="Outsourced" toggleGroup="$RadioBtn" />
+        <VBox layoutX="14.0" layoutY="131.0" prefHeight="156.0" spacing="10.0">
+            <children>
+                <Label text="ID" />
+                <Label prefHeight="0.0" prefWidth="33.0" text="Name" />
+                <Label text="Inv" />
+                <Label text="Price/Cost" />
+                <Label text="Max" />
+                <Label fx:id="addPartInOutLbl" text="Machine ID" />
+            </children>
+        </VBox>
+        <VBox layoutX="106.0" layoutY="131.0" prefHeight="102.0" prefWidth="114.0">
+            <children>
+                <TextField fx:id="addPartViewIdTxt" editable="false" promptText="Auto Gen- Disabled" />
+                <TextField fx:id="addPartViewNameTxt" />
+                <TextField fx:id="addPartViewInvTxt" />
+                <TextField fx:id="addPartViewPriceTxt" />
+                <TextField fx:id="addPartViewMaxTxt" />
+                <TextField fx:id="addPartViewInOutTxt" />
+            </children>
+        </VBox>
+        <Label layoutX="227.0" layoutY="239.0" prefHeight="17.0" prefWidth="33.0" text="Min" />
+        <TextField fx:id="addPartViewMinTxt" layoutX="257.0" layoutY="235.0" prefHeight="26.0" prefWidth="125.0" />
+        <Button layoutX="45.0" layoutY="453.0" mnemonicParsing="false" onAction="#addPartViewSaveBtn" text="Save" />
+        <Button layoutX="229.0" layoutY="453.0" mnemonicParsing="false" onAction="#addPartViewCancelBtn" text="Cancel" />
+    </children>
+</AnchorPane>
